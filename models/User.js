@@ -38,30 +38,30 @@ User.init(
         len: [4]
       }
     },
-    JavaScript: {
+    Javascript: {
       type: DataTypes.BOOLEAN,
-      allowNull: false
+      allowNull: true
     },
     Java: {
       type: DataTypes.BOOLEAN,
-      allowNull: false
+      allowNull: true
     },
     Python: {
       type: DataTypes.BOOLEAN,
-      allowNull: false
+      allowNull: true
     },
     SQL: {
       type: DataTypes.BOOLEAN,
-      allowNull: false
+      allowNull: true
     },
     C: {
       type: DataTypes.BOOLEAN,
-      allowNull: false
+      allowNull: true
     },
   },
   {
     hooks: {
-      // set up beforeCreate lifecycle "hook" functionality
+      // set up befor eCreate lifecycle "hook" functionality
       async beforeCreate(newUserData) {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
