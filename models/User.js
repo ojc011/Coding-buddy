@@ -37,7 +37,27 @@ User.init(
       validate: {
         len: [4]
       }
-    }
+    },
+    JavaScript: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false
+    },
+    Java: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false
+    },
+    Python: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false
+    },
+    SQL: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false
+    },
+    C: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false
+    },
   },
   {
     hooks: {
