@@ -13,17 +13,39 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/:id', (req, res) => {
+  User.findOne({
+    attributes: { exclude: ['password'] },
+    where: {
+      id: req.params.id
+    },
+    include: [
+      {
+        model: User,
+        attributes: ['id', 'username', 'email', 'Javascript', 'Java', 'SQL', 'Python', 'C']
+      },
+    ]
+  })
+    .then(dbUserData => {
+      if (!dbUserData) {
+        res.status(404).json({ message: 'No user found with this id' });
+        return;
+      }
+      res.json(dbUserData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 router.post('/', (req, res) => {
   User.create({
     username: req.body.username,
     email: req.body.email,
     password: req.body.password,
-    /* Javascript: req.body.Javascript,
-    Python: req.body.Python,
-    SQL: req.body.SQL,
-    Java: req.body.Java,
-    C: req.body.C */
-  }).then(dbUserData => {
+    
+  }).then(dbUserData => { 
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;

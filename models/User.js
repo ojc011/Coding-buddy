@@ -38,6 +38,10 @@ User.init(
         len: [4]
       }
     },
+    Github: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
     Javascript: {
       type: DataTypes.BOOLEAN,
       allowNull: true

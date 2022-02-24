@@ -1,8 +1,28 @@
 <article class="post">
   <div class="title">
     <h2 class="name">{{username}}</h2>
-    
-    <p>{{email}}</p>
-    
   </div>
+ 
+  <h4>Github: {{Github}}</h4>
+  
+  
+  {{#if Javascript}}
+  <p>Javascript: {{Javascript}} </p>
+  {{/if}}
+   {{#if Java}}
+  <p>Java: {{Java}} </p>
+  {{/if}}
+   {{#if SQL}}
+  <p>SQL: {{SQL}} </p>
+  {{/if}}
+   {{#if Python}}
+  <p>Python: {{Python}} </p>
+  {{/if}}
+   {{#if C}}
+  <p>C#: {{C}} </p>
+  {{/if}}
+  
+
+   <button type="submit">BUDDY UP!</button>
 </article>
+
