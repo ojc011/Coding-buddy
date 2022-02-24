@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
       ]
     })
       .then(dbUserData => {
-        const users = dbPostData.map(users => users.get({ plain: true }));
+        const users = dbUserData.map(users => users.get({ plain: true }));
   
         res.render('homepage', {
           users,
@@ -28,6 +28,14 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
       });
   });
+
+  router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+      res.redirect('/');
+      return;
+    }
   
+    res.render('login');
+  });
 
   module.exports = router;

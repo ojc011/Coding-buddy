@@ -10,15 +10,7 @@ const seedAll = async () => {
   console.log('--------------');
   await seedUsers();
   console.log('user seeded');
-/* 
-  await seedPosts();
-  console.log('--------------');
 
-  await seedComments();
-  console.log('--------------');
-
-  await seedVotes();
-  console.log('--------------'); */
 
   process.exit(0);
 };
