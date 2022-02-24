@@ -8,11 +8,146 @@ router.get('/', (req, res) => {
       attributes: [
         'id',
         'username',
+        'Github',
         'Javascript', 
         'Java', 
         'Python', 
         'SQL', 
         'C'
+      ]
+    })
+      .then(dbUserData => {
+        const users = dbUserData.map(users => users.get({ plain: true }));
+  
+        res.render('homepage', {
+          users,
+          loggedIn: req.session.loggedIn
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
+  router.get('/Javascript', (req, res) => {
+    console.log('======================');
+    User.findAll({
+      where: {
+        Javascript: true
+      },
+      attributes: [
+        'id',
+        'username',
+        'Github',
+        
+      ]
+    })
+      .then(dbUserData => {
+        const users = dbUserData.map(users => users.get({ plain: true }));
+        console.log(users);
+        res.render('homepage', {
+          users,
+          loggedIn: req.session.loggedIn
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
+  router.get('/Java', (req, res) => {
+    console.log('======================');
+    User.findAll({
+      where: {
+        Java: true
+      },
+      attributes: [
+        'id',
+        'username',
+        'Github',
+        
+      ]
+    })
+      .then(dbUserData => {
+        const users = dbUserData.map(users => users.get({ plain: true }));
+  
+        res.render('homepage', {
+          users,
+          loggedIn: req.session.loggedIn
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
+  router.get('/SQL', (req, res) => {
+    console.log('======================');
+    User.findAll({
+      where: {
+        SQL: true
+      },
+      attributes: [
+        'id',
+        'username',
+        'Github',
+      ]
+    })
+      .then(dbUserData => {
+        const users = dbUserData.map(users => users.get({ plain: true }));
+  
+        res.render('homepage', {
+          users,
+          loggedIn: req.session.loggedIn
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
+  router.get('/Python', (req, res) => {
+    console.log('======================');
+    User.findAll({
+      where: {
+        Javascript: true
+      },
+      attributes: [
+        'id',
+        'username',
+        'Github',
+        
+      ]
+    })
+      .then(dbUserData => {
+        const users = dbUserData.map(users => users.get({ plain: true }));
+  
+        res.render('homepage', {
+          users,
+          loggedIn: req.session.loggedIn
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
+  router.get('/C', (req, res) => {
+    console.log('======================');
+    User.findAll({
+      where: {
+        Javascript: true
+      },
+      attributes: [
+        'id',
+        'username',
+        'Github',
+        
       ]
     })
       .then(dbUserData => {
