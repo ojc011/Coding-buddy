@@ -1,3 +1,6 @@
+
+
+
 async function languageHandler(event) {
     event.preventDefault();
 
@@ -15,12 +18,20 @@ async function languageHandler(event) {
         console.log(response);
       } else {
         alert(response.statusText);
-      }
-     /*  if(select.option == view){
-           post.style.display = "block";
-        } else 
-        style.display = "none"; */
-     
+      }  
     }
+
+
+
   
     document.querySelector('#language-form').addEventListener('submit', languageHandler);
+
+    anime({
+      targets: '#title path',
+      strokeDashoffset: [anime.setDashoffset, 0],
+      easing: 'easeInOutQuad',
+      duration: 4000,
+      delay: function(el, i) { return i * 1000 },
+      direction: 'alternate',
+      loop: true
+    });
