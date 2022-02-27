@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const sequelize = require('../config/connection');
+const Sequelize = require('../config/connection');
 const User = require('../models/User');
 
 router.get('/', (req, res) => {
@@ -41,15 +41,17 @@ router.get('/', (req, res) => {
         'username',
         'Github',
         
+        
       ]
     })
       .then(dbUserData => {
         const users = dbUserData.map(users => users.get({ plain: true }));
         console.log(users);
-        res.render('homepage', {
-          users,
+        res.render('javascript', users/* {
+          users
+          ,
           loggedIn: req.session.loggedIn
-        });
+        } */);
       })
       .catch(err => {
         console.log(err);

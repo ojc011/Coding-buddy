@@ -105,19 +105,30 @@
     transition: color .1s;
     margin-left: 16px;
   }
+
+  #email {
+    padding: 6px;
+    color: #ffffff;
+    background-color:#225ca3;
+    border-radius: 4px
+  }
+
+  #email:hover {
+    transition: color .1s;
+  }
+  
+  #lang {
+    border-bottom: 1px solid rgb(255, 255, 255); 
+    width: 250px;
+    margin-bottom: 6px;
+  }
   
   .btn-no-style:hover {
     background: none;
     color: #2ad7e4;
   }
   
-  .delete-post-btn {
-    background-color: #2ad7e4;
-  }
-  
-  .delete-post-btn:hover {
-    background-color: #2ad7e4;
-  }
+
   
   .post {
     margin-bottom: 2%;
@@ -191,5 +202,11 @@
   #drop{
       padding-bottom:  8px;
       font-weight: bold;
+  }
+
+  #title{
+    stroke-dasharray:1000;
+    stroke-dashoffset: 1;
+    
   }
 
