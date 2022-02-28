@@ -22,7 +22,7 @@ router.get('/:id', (req, res) => {
     include: [
       {
         model: User,
-        attributes: ['id', 'username', 'email', 'Javascript', 'Java', 'SQL', 'Python', 'C']
+        attributes: ['id', 'username', 'email', 'language']
       },
     ]
   })
@@ -44,7 +44,9 @@ router.post('/', (req, res) => {
     username: req.body.username,
     email: req.body.email,
     password: req.body.password,
-    
+    github: req.body.github,
+    language: req.body.language
+      
   }).then(dbUserData => { 
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
@@ -103,7 +105,7 @@ router.post('/logout', (req, res) => {
 
 //Gets user by language
 
-router.get('/Javascript', (req, res) => {
+/* router.get('/Javascript', (req, res) => {
   User.findAll({
     where: {
       Javascript: true
@@ -156,7 +158,7 @@ router.get('/C', (req, res) => {
     .then(dbUserData => {
       res.json(dbUserData)
     });
-});
+}); */
 
 
 module.exports = router;
