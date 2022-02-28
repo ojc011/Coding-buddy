@@ -1,0 +1,35 @@
+{
+  "name": "coding-buddy",
+  "version": "1.0.0",
+  "description": "These days more and more people are trying to learn to code in their own free time and online. This doesnt present many opportunities to collaborate or work with other people.\r This applicaiton presents the opportunity to work with other people who might have skills in areas you might be lacking as well as you help them out in areas you might be strong in. In a sense it will link you up with a study buddy. This app will let you put in what you specialize in as well as link your github rep.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seeds": "node seeds/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaverickCavazos/Coding-buddy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaverickCavazos/Coding-buddy/issues"
+  },
+  "homepage": "https://github.com/MaverickCavazos/Coding-buddy#readme",
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.2",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "handlebars": "^4.7.7",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.16.1",
+    "session": "^0.1.0",
+    "text-to-svg": "^3.1.5"
+  }
+}

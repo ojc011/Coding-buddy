@@ -1,0 +1,30 @@
+<article class="post">
+  <div class="title">
+    <h2 class="name">{{username}}</h2>
+  </div>
+ 
+  <h4>Github: {{Github}}</h4>
+  
+  <h3 id="lang">Language Proficiencies</h3>
+  {{#if Javascript}}
+  <p>Javascript </p>
+  {{/if}}
+   {{#if Java}}
+  <p>Java</p>
+  {{/if}}
+   {{#if SQL}}
+  <p>SQL</p>
+  {{/if}}
+   {{#if Python}}
+  <p>Python</p>
+  {{/if}}
+   {{#if C}}
+  <p>C#</p>
+  {{/if}}
+  
+
+   <a href = "mailto:{{email}}?subject = Feedback&body = Message" id="email">
+BUDDY UP!
+</a>
+</article>
+

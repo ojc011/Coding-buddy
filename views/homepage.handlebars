@@ -1,0 +1,21 @@
+  <form id="language-form" class="choose">
+  <label id="drop" for="languages">What Language Do You Need Help With:</label>
+    <select name="languages" id="languages" class="strongest">
+      <option value="none">All Languages</option>
+      <option id="Javascript" value="Javascript">Javascript</option>
+      <option id="Java" value="Java">Java</option>
+      <option id="SQL" value="SQL">SQL</option>
+      <option id="Python" value="Python">Python</option>
+      <option id="C" value="C">C#</option>
+    </select>
+     <input type="submit" value="Submit">
+    </form>
+<ol class="post-list">
+  {{#each users as |user|}}
+  <ul>
+    {{> user-info user }}
+  </ul>
+  {{/each}}
+</ol>
+
+<script src="/javascript/homepage.js"></script>
