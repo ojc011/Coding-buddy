@@ -38,28 +38,12 @@ User.init(
         len: [4]
       }
     },
-    Github: {
+    github: {
       type: DataTypes.STRING,
       allowNull: true
     },
-    Javascript: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true
-    },
-    Java: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true
-    },
-    Python: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true
-    },
-    SQL: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true
-    },
-    C: {
-      type: DataTypes.BOOLEAN,
+    language: {
+      type: DataTypes.STRING,
       allowNull: true
     },
   },

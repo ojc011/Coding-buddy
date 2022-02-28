@@ -6,50 +6,50 @@ const userdata = [
       username: 'alesmonde0',
       email: 'nwestnedge0@cbc.com',
       password: 'password123',
-      Github: 'github/user.com',
-      Javascript: true,
+      github: 'github/user.com',
+      language: 'Javascript'
     },
     {
       username: 'jwilloughway1',
       email: 'rmebes1@sogou.com',
       password: 'password123',
-      Github: 'github/user2.com',
-      Java: true
+      github: 'github/user2.com',
+      language: 'C#'
     },
     {
       username: 'iboddam2',
       email: 'cstoneman2@last.com',
       password: 'password123',
-      Github: 'github/user3.com',
-      SQL: true,
+      github: 'github/user3.com',
+      language: 'Java'
     },
     {
       username: 'dstanmer3',
       email: 'ihellier3@goo.com',
       password: 'password123',
-      Github: 'github/user4.com',
-      Python: true
+      github: 'github/user4.com',
+      language: 'Python'
     },
     {
       username: 'djiri4',
       email: 'gmidgley4@weather.com',
       password: 'password123',
-      Github: 'github/user5.com',
-      C: true,
+      github: 'github/user5.com',
+      language: 'SQL'
     },
     {
       username: 'msprague5',
       email: 'larnout5@imdb.com',
       password: 'password123',
-      Github: 'github/user6.com',
-      Java: true
+      github: 'github/user6.com',
+      language: 'Java'
     },
     {
       username: 'mpergens6',
       email: 'hnapleton6@feedburner.com',
       password: 'password123',
-      Github: 'github/user7.com',
-      Javascript: true,
+      github: 'github/user7.com',
+      language: 'Javascript'
     },
 ];
 

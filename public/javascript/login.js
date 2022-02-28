@@ -29,15 +29,17 @@ async function loginFormHandler(event) {
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
     const language = document.querySelector('#languages').value;
+    const github = document.querySelector('#github-signup').value;
   
-    if (username && email && password && language) {
+    if (username && email && password && language && github) {
       const response = await fetch('/api/users', {
         method: 'post',
         body: JSON.stringify({
           username,
           email,
           password,
-          language
+          language,
+          github
         }),
         headers: { 'Content-Type': 'application/json' }
       });
