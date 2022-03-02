@@ -8,12 +8,8 @@ router.get('/', (req, res) => {
       attributes: [
         'id',
         'username',
-        'Github',
-        'Javascript', 
-        'Java', 
-        'Python', 
-        'SQL', 
-        'C'
+        'github',
+        'language'
       ]
     })
       .then(dbUserData => {
@@ -30,17 +26,17 @@ router.get('/', (req, res) => {
       });
   });
 
-  router.get('/Javascript', (req, res) => {
+  router.get('/javascript', (req, res) => {
     console.log('======================');
     User.findAll({
       where: {
-        Javascript: true
+        language: "Javascript"
       },
       attributes: [
         'id',
         'username',
-        'Github',
-        
+        'github',
+        'language'
         
       ]
     })
@@ -68,7 +64,7 @@ router.get('/', (req, res) => {
       attributes: [
         'id',
         'username',
-        'Github',
+        'github',
         
       ]
     })
@@ -95,7 +91,7 @@ router.get('/', (req, res) => {
       attributes: [
         'id',
         'username',
-        'Github',
+        'github',
       ]
     })
       .then(dbUserData => {
@@ -121,7 +117,7 @@ router.get('/', (req, res) => {
       attributes: [
         'id',
         'username',
-        'Github',
+        'github',
         
       ]
     })
@@ -148,7 +144,7 @@ router.get('/', (req, res) => {
       attributes: [
         'id',
         'username',
-        'Github',
+        'github',
         
       ]
     })

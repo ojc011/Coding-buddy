@@ -15,11 +15,8 @@ router.get('/', withAuth, (req, res) => {
             'id',
             'username',
             'email',
-            'Javascript',
-            'Java',
-            'Python',
-            'SQL',
-            'C'
+            'language',
+            'github'
         ],
     })
         .then(dbUserData => {
