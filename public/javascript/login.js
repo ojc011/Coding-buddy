@@ -30,8 +30,9 @@ async function loginFormHandler(event) {
     const password = document.querySelector('#password-signup').value.trim();
     const language = document.querySelector('#languages').value;
     const github = document.querySelector('#github-signup').value;
+    const linkedin = document.querySelector('#linkedin-singup').value;
   
-    if (username && email && password && language && github) {
+    if (username && email && password && language && github && linkedin) {
       const response = await fetch('/api/users', {
         method: 'post',
         body: JSON.stringify({
@@ -39,6 +40,7 @@ async function loginFormHandler(event) {
           email,
           password,
           language,
+          linkedin,
           github
         }),
         headers: { 'Content-Type': 'application/json' }

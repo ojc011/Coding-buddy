@@ -4,7 +4,7 @@ const User = require('../../models/User');
 const withAuth = require('../../utils/auth');
 
 
-router.get('/', withAuth, (req, res) => {
+router.get('/profile', withAuth, (req, res) => {
     console.log(req.session);
     console.log('======================');
     User.findAll({
@@ -16,7 +16,8 @@ router.get('/', withAuth, (req, res) => {
             'username',
             'email',
             'language',
-            'github'
+            'github',
+            'linkedin'
         ],
     })
         .then(dbUserData => {

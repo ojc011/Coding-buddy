@@ -42,6 +42,10 @@ User.init(
       type: DataTypes.STRING,
       allowNull: true
     },
+    linkedin: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
     language: {
       type: DataTypes.STRING,
       allowNull: true

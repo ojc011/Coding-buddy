@@ -44,6 +44,7 @@ router.post('/', (req, res) => {
     username: req.body.username,
     email: req.body.email,
     password: req.body.password,
+    linkedin: req.body.linkedin,
     github: req.body.github,
     language: req.body.language
       
@@ -64,7 +65,6 @@ router.post('/', (req, res) => {
 })
 
 router.post('/login', (req, res) => {
-  // expects {email: 'lernantino@gmail.com', password: 'password1234'}
   User.findOne({
     where: {
       email: req.body.email
@@ -102,63 +102,5 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
-
-//Gets user by language
-
-/* router.get('/Javascript', (req, res) => {
-  User.findAll({
-    where: {
-      Javascript: true
-    },
-  })
-    .then(dbUserData => {
-      res.json(dbUserData)
-    });
-});
-
-router.get('/Java', (req, res) => {
-  User.findAll({
-    where: {
-      Java: true
-    },
-  })
-    .then(dbUserData => {
-      res.json(dbUserData)
-    });
-});
-
-router.get('/Python', (req, res) => {
-  User.findAll({
-    where: {
-      Python: true
-    },
-  })
-    .then(dbUserData => {
-      res.json(dbUserData)
-    });
-});
-
-router.get('/SQL', (req, res) => {
-  User.findAll({
-    where: {
-      SQL: true
-    },
-  })
-    .then(dbUserData => {
-      res.json(dbUserData)
-    });
-});
-
-router.get('/C', (req, res) => {
-  User.findAll({
-    where: {
-      C: true
-    },
-  })
-    .then(dbUserData => {
-      res.json(dbUserData)
-    });
-}); */
-
 
 module.exports = router;

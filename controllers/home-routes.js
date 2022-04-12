@@ -9,6 +9,7 @@ router.get('/', (req, res) => {
         'id',
         'username',
         'github',
+        'linkedin',
         'language'
       ]
     })
@@ -36,6 +37,7 @@ router.get('/', (req, res) => {
         'id',
         'username',
         'github',
+        'linkedin',
         'language'
         
       ]
@@ -65,6 +67,7 @@ router.get('/', (req, res) => {
         'id',
         'username',
         'github',
+        'linkedin'
         
       ]
     })
@@ -92,6 +95,7 @@ router.get('/', (req, res) => {
         'id',
         'username',
         'github',
+        'linkedin'
       ]
     })
       .then(dbUserData => {
@@ -118,6 +122,7 @@ router.get('/', (req, res) => {
         'id',
         'username',
         'github',
+        'linkedin'
         
       ]
     })
@@ -145,6 +150,7 @@ router.get('/', (req, res) => {
         'id',
         'username',
         'github',
+        'linkedin'
         
       ]
     })

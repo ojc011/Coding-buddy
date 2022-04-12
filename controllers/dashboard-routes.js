@@ -21,7 +21,7 @@ router.get('/', withAuth, (req, res) => {
         .then(dbUserData => {
             const users = dbUserData.map(users => users.get({ plain: true }));
 
-            res.render('dashboard', { users, loggedIn: true });
+            res.render('edit-profile', { users, loggedIn: true });
         })
         .catch(err => {
             console.log(err);

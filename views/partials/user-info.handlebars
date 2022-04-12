@@ -1,18 +1,29 @@
-<article class="post">
-  <div class="title">
-    <h2 class="name">{{username}}</h2>
+<div class="row">
+  <div class="container column">
+    <div class="card">
+      <p class="card__name">{{username}}</p>
+      <div class="grid-container">
+
+        <div class="grid-child-posts">
+          Languages
+        </div>
+        <div class="grid-child-followers">
+          {{language}}
+        </div>
+
+      </div>
+      <ul class="social-icons">
+        <li><a href={{github}}><img class="fa fa-twitter" alt="github" src="images/github.png" width="30"
+              height="30" /></a></li>
+        <li><a href={{linkedin}}><img class="fa fa-instagram" alt="github" src="images/linkedin.png" width="30"
+              height="30" /></a></li>
+
+      </ul>
+      <a href="mailto:{{email}}?subject = Feedback&body = Message" id="email">
+        <button class="btn draw-border">Email</button>
+      </a>
+
+
+    </div>
   </div>
- 
-  <h4>Github: {{github}}</h4>
-  
-  <h3 id="lang">Language Proficiencies</h3>
-  
-  <p>{{language}}</p>
-  
-  
-
-   <a href = "mailto:{{email}}?subject = Feedback&body = Message" id="email">
-BUDDY UP!
-</a>
-</article>
-
+</div>
